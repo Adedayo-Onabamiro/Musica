@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script>
+
+    <link rel="stylesheet" href="/index.css" >
+    <title>Home</title>
+</head>
+<body>
+    <section class="FullPage">
+        <div class="LeftSide"></div>
+
+        <div class="RightSide">
+            <div class="topSearchContainer">
+                <form action="/search" class="search-form">
+                  <label for="search-input" class="sr-only">Search</label>
+                  <div class="search-group">
+                    <button type="submit" class="search-icon"><i class="fa fa-search"></i></button>
+                    <input type="text" class="search-input" id="search-input" placeholder="Search artists">
+                  </div>
+                </form>
+              </div>
+
+            <div class="playlistChartBox">
+                <div class="PlayListBox">
+                    <div class="slideshowContainer">
+
+                        <div class="slideshowItem S1 fade">
+                            <div class="slideshowItemLeft">
+                                <p>Currated playlist</p>
+                                <div class="ItemMiddle">
+                                    <h3>R & B Hits</h3>
+                                    <p>All mine, Lie again, Petty call me everyday,
+                                        Out of time, No love, Bad habit,
+                                        and so much more</p>
+                                </div>
+                                <div class="Itembottom">
+                                    <div class="avatars">
+                                        <ul>
+                                            <li> <img src="/images/Ellipse 2.png"> </li>
+                                            <li> <img src="/images/Ellipse 3.png">  </li>
+                                            <li> <img src="/images/Ellipse 4.png">  </li>
+                                            <li> <img src="/images/Ellipse 5.png">  </li>
+                                            <li> <img src="/images/Ellipse 6.png">  </li>
+                                          </ul>
+                                    </div>
+                                    <img class="heart" src="/images/Heart.png">
+                                    <h3>33K Likes</h3>
+                                </div>
+                            </div>
+                            <div class="slideshowItemRight">
+                                <img src="/images/Pexels Photo by Eric Esma.png">
+                            </div>
+                            <img class="smoke" src="/images/Vector.png">
+                        </div>
+
+                        <div class="slideshowItem S2 fade">
+                            <div class="slideshowItemLeft">
+                                <p>Currated playlist</p>
+                                <div class="ItemMiddle">
+                                    <h3>Rock and Metal</h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                         Tenetur</p>
+                                </div>
+                                <div class="Itembottom">
+                                    <div class="avatars">
+                                        <ul>
+                                            <li> <img src="/images/Ellipse 2.png"> </li>
+                                            <li> <img src="/images/Ellipse 3.png">  </li>
+                                            <li> <img src="/images/Ellipse 4.png">  </li>
+                                            <li> <img src="/images/Ellipse 5.png">  </li>
+                                            <li> <img src="/images/Ellipse 6.png">  </li>
+                                          </ul>
+                                    </div>
+                                    <img class="heart" src="/images/Heart.png">
+                                    <h3>33K Likes</h3>
+                                </div>
+                            </div>
+                            <div class="slideshowItemRight">
+                                <img src="/images/Pexels Photo by Eric Esma.png">
+                            </div>
+                            <img class="smoke" src="/images/Vector.png">
+                        </div>
+
+                        <div class="slideshowItem S3 fade">
+                            <div class="slideshowItemLeft">
+                                <p>Currated playlist</p>
+                                <div class="ItemMiddle">
+                                    <h3>Best of Gospel</h3>
+                                    <p>All mine, Lie again, Petty call me everyday,
+                                        Out of time, No love, Bad habit,
+                                        and so much more</p>
+                                </div>
+                                <div class="Itembottom">
+                                    <div class="avatars">
+                                        <ul>
+                                            <li> <img src="/images/Ellipse 2.png"> </li>
+                                            <li> <img src="/images/Ellipse 3.png">  </li>
+                                            <li> <img src="/images/Ellipse 4.png">  </li>
+                                            <li> <img src="/images/Ellipse 5.png">  </li>
+                                            <li> <img src="/images/Ellipse 6.png">  </li>
+                                          </ul>
+                                    </div>
+                                    <img class="heart" src="/images/Heart.png">
+                                    <h3>33K Likes</h3>
+                                </div>
+                            </div>
+                            <div class="slideshowItemRight">
+                                <img src="/images/Pexels Photo by Eric Esma.png">
+                            </div>
+                            <img class="smoke" src="/images/Vector.png">
+                        </div>           
+                    </div>
+                        
+                </div>
+
+                <div class="ChartBox">
+                    <h3 class="chartTitle">Top charts</h3>
+                    <div class="ChartContentBox">
+                            <div class="slider-wrapper">
+                              <div class="slider-item">
+                                <div class="SI1">
+                                    <img src="/images/a1254fdf29fcb472537cc00108e9b716.jfif">
+                                </div>
+                                <div class="SI2">
+                                    <h2 class="title">Golden age of 80s</h2>
+                                    <p class="author">Sean swadder</p>
+                                    <p class="duration">2:34:45</p>
+                                </div>
+                                <div class="SI3">
+                                    <img src="/images/brownHeartEmpty.png">
+                                </div>
+                              </div>
+                              
+                              <div class="slider-item">
+                                <div class="SI1">
+                                    <img src="/images/a1254fdf29fcb472537cc00108e9b716.jfif">
+                                </div>
+                                <div class="SI2">
+                                    <h2 class="title">Golden age of 80s</h2>
+                                    <p class="author" style="color:gainsboro ;">Sean swadder</p>
+                                    <p class="duration">2:34:45</p>
+                                </div>
+                                <div class="SI3">
+                                    <img src="/images/brownHeartEmpty.png">
+                                </div>
+                              </div>
+
+                              <div class="slider-item">
+                                <div class="SI1">
+                                    <img src="/images/a1254fdf29fcb472537cc00108e9b716.jfif">
+                                </div>
+                                <div class="SI2">
+                                    <h2 class="title">Golden age of 80s</h2>
+                                    <p class="author" style="color:gainsboro ;">Sean swadder</p>
+                                    <p class="duration">2:34:45</p>
+                                </div>
+                                <div class="SI3">
+                                    <img src="/images/brownHeartEmpty.png">
+                                </div>
+                              </div>
+
+                              <div class="slider-item">
+                                <div class="SI1">
+                                    <img src="/images/a1254fdf29fcb472537cc00108e9b716.jfif">
+                                </div>
+                                <div class="SI2">
+                                    <h2 class="title">Golden age of 80s</h2>
+                                    <p class="author" style="color:gainsboro ;">Sean swadder</p>
+                                    <p class="duration">2:34:45</p>
+                                </div>
+                                <div class="SI3">
+                                    <img src="/images/brownHeartEmpty.png">
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="NewReleasesBox">
+                <h3>New Releases</h3>
+
+                <div class="slider-container"> 
+                    <div class="slider-wrapper">
+                        <div class="SliderItem">
+                            <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                            <p class="title">Keeps Me Alive</p>
+                            <p class="artiste">Moses Sumney</p>
+                        </div>
+
+                        <div class="SliderItem">
+                            <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                            <p class="title">Keeps Me Alive Keeps Me Alive</p>
+                            <p class="artiste">Moses Sumney</p>
+                        </div>
+
+                        <div class="SliderItem">
+                            <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                            <p class="title">Keeps Me Alive</p>
+                            <p class="artiste">Moses Sumney</p>
+                        </div>
+
+                        <div class="SliderItem">
+                            <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                            <p class="title">Keeps Me Alive</p>
+                            <p class="artiste">Moses Sumney</p>
+                        </div>
+
+                        <div class="SliderItem">
+                            <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                            <p class="title">Keeps Me Alive</p>
+                            <p class="artiste">Moses Sumney</p>
+                        </div>
+
+                        <div class="SliderItem">
+                            <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                            <p class="title">Keeps Me Alive</p>
+                            <p class="artiste">Moses Sumney</p>
+                        </div>
+
+                        <div class="SliderItem">
+                            <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                            <p class="title">Keeps Me Alive</p>
+                            <p class="artiste">Moses Sumney</p>
+                        </div>
+
+                        <div class="SliderItem">
+                            <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                            <p class="title">Keeps Me Alive</p>
+                            <p class="artiste">Moses Sumney</p>
+                        </div>
+
+                        <div class="SliderItem">
+                            <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                            <p class="title">Keeps Me Alive</p>
+                            <p class="artiste">Moses Sumney</p>
+                        </div>
+
+                        <div class="SliderItem">
+                            <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                            <p class="title">Keeps Me Alive</p>
+                            <p class="artiste">Moses Sumney</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="PIYABox">
+                <h3>Popular in your area</h3>
+
+                <div class="slider-container"> 
+                    <div class="slider-wrapper">
+                        <div class="SliderItem">
+                            <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                            <p class="title">Keeps Me Alive</p>
+                            <p class="artiste">Moses Sumney</p>
+                        </div>
+
+                        <div class="SliderItem">
+                            <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                            <p class="title">Keeps Me Alive Keeps Me Alive</p>
+                            <p class="artiste">Moses Sumney</p>
+                        </div>
+
+                        <div class="SliderItem">
+                            <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                            <p class="title">Keeps Me Alive</p>
+                            <p class="artiste">Moses Sumney</p>
+                        </div>
+
+                        <div class="SliderItem">
+                            <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                            <p class="title">Keeps Me Alive</p>
+                            <p class="artiste">Moses Sumney</p>
+                        </div>
+
+                        <div class="SliderItem">
+                            <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                            <p class="title">Keeps Me Alive</p>
+                            <p class="artiste">Moses Sumney</p>
+                        </div>
+
+                        <div class="SliderItem">
+                            <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                            <p class="title">Keeps Me Alive</p>
+                            <p class="artiste">Moses Sumney</p>
+                        </div>
+
+                        <div class="SliderItem">
+                            <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                            <p class="title">Keeps Me Alive</p>
+                            <p class="artiste">Moses Sumney</p>
+                        </div>
+
+                        <div class="SliderItem">
+                            <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                            <p class="title">Keeps Me Alive</p>
+                            <p class="artiste">Moses Sumney</p>
+                        </div>
+
+                        <div class="SliderItem">
+                            <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                            <p class="title">Keeps Me Alive</p>
+                            <p class="artiste">Moses Sumney</p>
+                        </div>
+
+                        <div class="SliderItem">
+                            <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                            <p class="title">Keeps Me Alive</p>
+                            <p class="artiste">Moses Sumney</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <div class="controllerBox">
+                <div class="left">
+                    <div class="details">
+                        <div class="details1">
+                            <img src="/images/a1254fdf29fcb472537cc00108e9b716.jfif">
+                        </div>
+                        <div class="details2">
+                            <p class="title"> Seasons in</p>
+                            <p class="artiste"> James</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="center">
+
+                </div>
+                <div class="right">
+
+                </div>
+
+            </div> -->
+
+            <div class="music-player">
+                <div class="music-controls">
+                  <button class="previous-button"><i class="fa fa-backward"></i></button>
+                  <button class="play-button"><i class="fa fa-play"></i></button>
+                  <button class="pause-button"><i class="fa fa-pause"></i></button>
+                  <button class="stop-button"><i class="fa fa-stop"></i></button>
+                  <button class="next-button"><i class="fa fa-forward"></i></button>
+                  <button class="shuffle-button"><i class="fa fa-random"></i></button>
+                  <button class="repeat-button"><i class="fa fa-redo"></i></button>
+                </div>
+                <div class="music-progress">
+                  <span class="music-timer">0:00</span>
+                  <input type="range" min="0" max="100" value="0" class="music-slider">
+                  <span class="music-duration">0:00</span>
+                </div>
+                <div class="volume-container">
+                  <button class="volume-button"><i class="fa fa-volume-up"></i></button>
+                  <input type="range" min="0" max="100" value="100" class="volume-slider">
+                </div>
+              </div>
+              
+              
+            
+        </div>
+    </section>
+
+
+    <script src="/index.js"></script>
+</body>
+</html>
