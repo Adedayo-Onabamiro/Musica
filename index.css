@@ -64,7 +64,7 @@ body{
 
 .playlistChartBox{
     height: 100%;
-    max-height: 370px;
+    /* max-height: 370px; */
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -243,7 +243,7 @@ body{
     padding: 3% 0%;
 }
 .SI1{
-    flex: 20%;
+    width: 20%;
     height: 96%;
     display: flex;
     justify-content: center;
@@ -256,7 +256,7 @@ body{
     border-radius: 15px;
 }
 .SI2{
-    flex: 60%;
+    width: 60%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -284,7 +284,7 @@ body{
     padding: 5px;
 }
 .SI3{
-    flex: 10%;
+    width: 10%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -420,6 +420,7 @@ body{
 }
 
 /* music controller section starts */
+    /* box-shadow: 0px 0px 10px #ccc;
 .music-player {
     height: auto;
     width: 100%;
@@ -429,7 +430,6 @@ body{
     padding: 20px 0;
     background-color: #f0f0f0;
     border: 1px solid red;
-    /* box-shadow: 0px 0px 10px #ccc; */
   }
   
   .music-controls {
@@ -521,13 +521,14 @@ body{
   
   .volume-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
-  }
+  } */
   
-/* .controllerBox{
-    padding: 20px 0;
-    height: 150px;
+.controllerBox{
+    /* padding: 20px 0; */
+    height: 100%;
+    max-height: 150px;
     width: 100%;
-    background-color: aqua;
+    background-color: transparent;
     margin-bottom: 5%;
     display: flex;
     flex-direction: row;
@@ -542,28 +543,31 @@ body{
     margin: 0;
 }
 .left .details{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    background-color: transparent;
 }
 .details .details1{
-    background-color: antiquewhite;
+    background-color: transparent;
     height: 100%;
-    flex: 50%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .details .details1 img{
     object-fit: cover;
-    height: 80%;
-    width: 100%;
+    height: 90%;
+    width: 80%;
     border-radius: 10px;
 }
 .details .details2{
-    background-color: greenyellow;
+    background-color: transparent;
     height: 100%;
-    flex: 50%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -574,6 +578,9 @@ body{
     margin-bottom: 5px;
     padding: 0;
     font-size: 1.2rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow:hidden;
 }
 .details2 .artiste{
     color: #FFFFFF90;
@@ -584,15 +591,126 @@ body{
     display: flex;
     flex: 60%;
     border: 1px solid green;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+.music-player {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: transparent;
+    border: 1px solid red;
+  }
+.music-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .music-controls button {
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  .music-controls button:hover {
+    color: #666;
+  }
+  
+  .music-controls button:focus {
+    outline: none;
+  }
+  
+  .music-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .music-timer, .music-duration {
+    font-size: 16px;
+    color: #666;
+    margin: 0 10px;
+  }
+  
+  .music-slider {
+    width: 100%;
+    margin: 0 10px;
+  }
+  
+  .music-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #333;
+    cursor: pointer;
+  }
+  
+  .music-slider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #333;
+    cursor: pointer;
+  }
+  
 .controllerBox .right{
     display: flex;
     flex: 20%;
     border: 1px solid blue;
-} */
+    justify-content: center;
+    align-items: center;
+}
+
+.volume-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .volume-button {
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .volume-button:hover {
+    color: #FACD66;
+  }
+  
+  .volume-button:focus {
+    outline: none;
+  }
+  
+  .volume-slider {
+    width: 100px;
+    margin-right: 10px;
+  }
+  
+  .volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  } 
 /* music controller section ends */
 
 /* responsive code */
+@media screen and (min-width: 930px) {
+    .playlistChartBox{
+        height: 100%;
+        max-height: 370px;
+    }
+}
 @media screen and (max-width: 1170px) {
     .avatars ul li:nth-child(n+2) {
         margin-left: -25px;
@@ -604,6 +722,43 @@ body{
     }
     .PlayListBox, .ChartBox{
         width: 100%;
+    }   
+    .ChartBox{
+        margin-top: 5%;
+    }
+    .ChartBox .slider-wrapper{
+        display: block;
+        white-space: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+    .ChartBox .slider-wrapper::-webkit-scrollbar{
+        display: none;
+    }
+    .ChartBox .slider-item{
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 80%;
+        /* max-height: 120px; */
+        display: inline-flex;
+        border-radius: 15px;
+        background-color: #1a1e1f;
+        cursor: grab;
+        margin-right: 15px;
+        padding: 3% 0%;
+    }
+    .ChartContentBox .title{
+        font-size: 1rem;
+        font-weight: 100;
+        color: white;
+        margin: 0;
+        padding: 5px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow:hidden;
     }
 }
 @media screen and (max-width: 580px){
