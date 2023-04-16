@@ -19,12 +19,27 @@
 </head>
 <body>
     <section class="FullPage">
-        <div class="LeftSide"></div>
+        <!-- <div class="LeftSide">
+            <div class="logoDiv">
+                <Img src="/images/logo.png">
+            </div>
+
+            <div class="navBox">
+                <img src="/images/Home.png">
+                <img src="/images/playlist.png">
+                <img src="/images/radio.png">
+                <img src="/images/videos.png">
+            </div>
+        </div> -->
 
         <div class="RightSide">
             <div class="topSearchContainer">
+                <div class="logoDiv">
+                    <Img src="/images/logo.png">
+                </div>
+
                 <form action="/search" class="search-form">
-                  <label for="search-input" class="sr-only">Search</label>
+                  <label for="search-input" class="sr-only"></label>
                   <div class="search-group">
                     <button type="submit" class="search-icon"><i class="fa fa-search"></i></button>
                     <input type="text" class="search-input" id="search-input" placeholder="Search artists">
@@ -33,6 +48,14 @@
               </div>
 
             <div class="playlistChartBox">
+                <div class="navBox">
+                    <div class="navBoxInsideBox">
+                        <img src="/images/Home.png">
+                        <img src="/images/playlist.png">
+                        <img src="/images/radio.png">
+                        <img src="/images/videos.png">
+                    </div>
+                </div>
                 <div class="PlayListBox">
                     <div class="slideshowContainer">
 
@@ -405,29 +428,6 @@
                 </div>
 
             </div>
-
-            <!-- <div class="music-player">
-                <div class="music-controls">
-                  <button class="previous-button"><i class="fa fa-backward"></i></button>
-                  <button class="play-button"><i class="fa fa-play"></i></button>
-                  <button class="pause-button"><i class="fa fa-pause"></i></button>
-                  <button class="stop-button"><i class="fa fa-stop"></i></button>
-                  <button class="next-button"><i class="fa fa-forward"></i></button>
-                  <button class="shuffle-button"><i class="fa fa-random"></i></button>
-                  <button class="repeat-button"><i class="fa fa-redo"></i></button>
-                </div>
-                <div class="music-progress">
-                  <span class="music-timer">0:00</span>
-                  <input type="range" min="0" max="100" value="0" class="music-slider">
-                  <span class="music-duration">0:00</span>
-                </div>
-                <div class="volume-container">
-                  <button class="volume-button"><i class="fa fa-volume-up"></i></button>
-                  <input type="range" min="0" max="100" value="100" class="volume-slider">
-                </div>
-              </div> -->
-              
-              
             
         </div>
     </section>

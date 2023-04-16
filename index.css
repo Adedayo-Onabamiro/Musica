@@ -13,25 +13,55 @@ body{
 }    
 .LeftSide{
     display: flex;
-    flex-direction: row;
-    height: 100%;
+    flex-direction: column;
+    /* height: inherit; */
     width: 7%;
     border: 1px solid green;
+    align-items: center;
+    /* justify-content: center; */
 }
+/* .logoDiv{
+    margin: 2% auto;
+}
+.navBox{
+    height: auto;
+    width: 80%;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.navBox img{
+    height: 30px;
+    width: 25px;
+    object-fit: contain;
+    margin-bottom: 5%;
+} */
 .RightSide{
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 93%;
+    width: 99%;
 }
 /* start of search box at top */
 .topSearchContainer {
     width: 100%;
-    margin: 2% auto;
+    margin: 2% 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-.search-form {
+.logoDiv{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex: 10%;
+}
+.search-form {
+    flex: 90%;
+    display: flex;
+    justify-content: start;
     align-items: center;
     height: 50px;
 }  
@@ -40,7 +70,7 @@ body{
     align-items: center;
     background-color: transparent;
     padding: 5px;
-    width: 100%;
+    width: 80%;
 } 
 .search-icon {
     background-color: transparent;
@@ -54,7 +84,7 @@ body{
     border: none;
     background-color: transparent;
     font-size: 16px;
-    color: #333;
+    color: white;
     outline: none;
 }
 .search-input::placeholder {
@@ -69,6 +99,31 @@ body{
     display: flex;
     flex-direction: row;
     margin-bottom: 2%;
+}
+.navBox{
+    height: auto;
+    flex: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.navBoxInsideBox{
+    height: 80%;
+    width: 60%;
+    background-color: #1a1e1f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    padding: 20px 0;
+}
+.navBox img{
+    height: 40px;
+    width: 30px;
+    object-fit: contain;
+    margin-bottom: 5%;
 }
 .PlayListBox{
     height: 100%;
@@ -140,8 +195,8 @@ body{
     align-items: center;
 }
 .avatars img{
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -200,7 +255,7 @@ body{
 /* slideshow css */
 .ChartBox{
     height: auto;
-    width: 40%;
+    width: 30%;
 }
 .chartTitle{
     color: white;
@@ -251,7 +306,8 @@ body{
 }
 .SI1 img{
     height: 100%;
-    width: 70px;
+    width: 100%;
+    max-width: 70px;
     object-fit: cover;
     border-radius: 15px;
 }
@@ -268,6 +324,9 @@ body{
     color: white;
     margin: 0;
     padding: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow:hidden;
 }
 .ChartContentBox .author{
     font-size: .9rem;
@@ -301,7 +360,8 @@ body{
 .NewReleasesBox{
     height: 100%;
     /* max-height: 400px; */
-    width: 100%;
+    margin-left: 10%;
+    width: 90%;
     background-color: transparent;
     margin-bottom: 2%;
 }
@@ -362,7 +422,8 @@ body{
 .PIYABox{
     height: 100%;
     /* max-height: 400px; */
-    width: 100%;
+    margin-left: 10%;
+    width: 90%;
     background-color: transparent;
     margin-bottom: 2%;
 }
@@ -420,123 +481,20 @@ body{
 }
 
 /* music controller section starts */
-    /* box-shadow: 0px 0px 10px #ccc;
-.music-player {
-    height: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-    background-color: #f0f0f0;
-    border: 1px solid red;
-  }
-  
-  .music-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .music-controls button {
-    border: none;
-    background-color: transparent;
-    font-size: 24px;
-    color: #333;
-    margin: 0 10px;
-    cursor: pointer;
-  }
-  
-  .music-controls button:hover {
-    color: #666;
-  }
-  
-  .music-controls button:focus {
-    outline: none;
-  }
-  
-  .music-progress {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .music-timer, .music-duration {
-    font-size: 16px;
-    color: #666;
-    margin: 0 10px;
-  }
-  
-  .music-slider {
-    width: 300px;
-    margin: 0 10px;
-  }
-  
-  .music-slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #333;
-    cursor: pointer;
-  }
-  
-  .music-slider::-moz-range-thumb {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #333;
-    cursor: pointer;
-  }
-  
-  .volume-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .volume-button {
-    border: none;
-    background-color: transparent;
-    font-size: 24px;
-    color: #333;
-    margin-right: 10px;
-    cursor: pointer;
-  }
-  
-  .volume-button:hover {
-    color: #666;
-  }
-  
-  .volume-button:focus {
-    outline: none;
-  }
-  
-  .volume-slider {
-    width: 100px;
-    margin-right: 10px;
-  }
-  
-  .volume-slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-  } */
-  
+    /* box-shadow: 0px 0px 10px #ccc;*/
 .controllerBox{
     /* padding: 20px 0; */
     height: 100%;
     max-height: 150px;
-    width: 100%;
-    background-color: transparent;
-    margin-bottom: 5%;
+    width: auto;
+    background-color: #1a1e1f;
     display: flex;
     flex-direction: row;
+    margin: 2%;
 }
 .controllerBox .left{
     display: flex;
     flex: 20%;
-    border: 1px solid red;
     flex-direction: row;
     justify-content: space-evenly;
     padding: 0;
@@ -590,7 +548,6 @@ body{
 .controllerBox .center{
     display: flex;
     flex: 60%;
-    border: 1px solid green;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -603,7 +560,6 @@ body{
     align-items: center;
     justify-content: space-evenly;
     background-color: transparent;
-    border: 1px solid red;
   }
 .music-controls {
     display: flex;
@@ -615,7 +571,7 @@ body{
     border: none;
     background-color: transparent;
     font-size: 1.2rem;
-    color: white;
+    color: #FACD66;
     margin: 0 10px;
     cursor: pointer;
   }
@@ -667,7 +623,6 @@ body{
 .controllerBox .right{
     display: flex;
     flex: 20%;
-    border: 1px solid blue;
     justify-content: center;
     align-items: center;
 }
@@ -717,6 +672,9 @@ body{
    }
 }
 @media screen and (max-width: 930px){
+    .navBox{
+        display: none;
+    }
     .playlistChartBox{
         flex-direction: column;
     }
@@ -760,15 +718,35 @@ body{
         white-space: nowrap;
         overflow:hidden;
     }
+    .NewReleasesBox, .PIYABox{
+        margin-left: 0;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 750px){   
+    .controllerBox .right,
+    .repeat-button,
+    .shuffle-button,
+    .stop-button,
+    .pause-button,
+    .previous-button,
+    .music-progress
+    {
+        display: none;
+    }
+    .controllerBox .left{
+        flex: 70%;
+    }
+    .controllerBox .center{
+        flex: 30%;
+    }
 }
 @media screen and (max-width: 580px){
     .slideshowItemLeft{
         height: 100%;
         min-height: 60%;
         width: 100%;
-    }
-    .Itembottom{
-        margin-bottom: 20%;
+        padding: 10% 5%;
     }
     .slideshowItemRight{
         display: none;
