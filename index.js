@@ -1,3 +1,14 @@
+//start of responsive nav menu
+const menuIcon = document.querySelector('.menu-icon');
+const hamburger = document.querySelector('.hamburger');
+const sideMenu = document.querySelector('.side-menu');
+
+menuIcon.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  sideMenu.classList.toggle('active');
+});
+
+
 // start of initial slideshow at top
 let slideIndex = 0;
 showSlides();
