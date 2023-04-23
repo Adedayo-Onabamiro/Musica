@@ -8,10 +8,22 @@ body{
     height: 100%;
     padding: 0 2%;
     width: 96%;
-    background-color: #1d2123;
+    /* background-color: #1d2123; */
+    background-image: url(/images/a1254fdf29fcb472537cc00108e9b716.jfif);
+    background-size: cover;
+    position: relative;
     display: flex;
     flex-direction: row;
-}    
+}  
+.FullPage::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+}  
 .LeftSide{
     display: flex;
     flex-direction: column;
@@ -19,13 +31,17 @@ body{
     width: 7%;
     border: 1px solid green;
     align-items: center;
+    position: relative;
     /* justify-content: center; */
 }
 .RightSide{
     display: flex;
     flex-direction: column;
     height: 100%;
+    min-height: 100vh;
+    justify-content: space-evenly;
     width: 99%;
+    position: relative;
 }
 /* start of search box at top */
 .topSearchContainer {
@@ -34,6 +50,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: relative;
 }
 .side-menu {
     position: fixed;
@@ -119,7 +136,7 @@ body{
 }
 /* end of search box at top */
 
-.playlistChartBox{
+.bigChartHeaderBox{
     height: 100%;
     /* max-height: 370px; */
     width: 100%;
@@ -153,137 +170,97 @@ body{
     object-fit: contain;
     margin-bottom: 5%;
 }
-.PlayListBox{
+/* .TopBigChartHeaderBox{
     height: 100%;
     width: 60%;
     display: flex;
     justify-content: start;
     align-items: center;
-}
-
-/* Slideshow container */
-.slideshowContainer {
-  width: 90%;
-  position: relative;
-  height: 90%;
-  background-color: transparent;
-}
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 2.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-.slideshowItem{
-    border-radius: 50px;
+} */
+.TopBigChartHeaderBox{
     height: 100%;
+    max-height: 300px;
     width: 100%;
-    /* border: 1px solid white; */
     display: flex;
     flex-direction: row;
-    background-color: transparent;
-    align-items: center;
 }
-.S1{
-    background-color: #609EAF;
-}
-.S2{
-    background-color: orange;
-}
-.S3{
-    background-color: purple;
-}
-.slideshowItemLeft{
-    color: white;
+.TB1x2{
     height: 100%;
-    width: 45%;
-    padding: 0 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-.ItemMiddle h3{
-    color: white;
-    margin: 0;
-    font-size: 2rem;
-    font-family: Quicksand;
-}
-.Itembottom{
-    height: 50px;
-    width: 100%;
-    background-color: transparent;
+    width: 80%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
-.avatars img{
-    width: 25px;
-    height: 25px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-.avatars ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.avatars li{
-    object-fit: contain;
-    /* border: 1px solid rgb(144, 137, 137); */
-    display: inline-block;
-    position: relative;
-    -webkit-transition: .2s ease;
-    transition: .2s ease;
-}
-.avatars li:nth-child(1) {}
-.avatars li:nth-child(2) {}
-.avatars li:nth-child(3) {}
-.avatars li:nth-child(4) {}
-.avatars li:nth-child(5) {}
-.avatars li:nth-child(n+2) { margin-left: -25px; }
-  
-.avatars ul li:nth-child(n+2) {
-     margin-left: -15px;
-}
-.heart{
-    height: 30px;
-    width: 30px;
-}
-.Itembottom h3{
-    font-weight: 100;
-    color: white;
-}
-.slideshowItemRight{
-    height: auto;
+.TB1{
     display: flex;
-    width: 30%;
+    height: 100%;
+    flex: auto;
     justify-content: center;
     align-items: center;
 }
-.slideshowItemRight img{
-    z-index: 10;
-    position: relative;
+.TB1 img{
+    margin-left: 5%;
+    height: 200px;
     object-fit: contain;
-    height: 100%;
+    border-radius: 15px;
 }
-.smoke{
-    z-index: 1;
-    position: absolute;
-    object-fit: contain;
-    right: 5%;
-    top: 0%;
-    height: 98%;
-}
-/* slideshow css */
-.ChartBox{
+.TB2{
+    display: flex;
     height: auto;
-    width: 30%;
+    flex: 55%;
+    flex-direction: column;
+    justify-content: center;
+}
+.TB2Title{
+    margin-bottom: 10px;
+    padding: 0;
+    color: #A4C7C6;
+}
+.TB2Desc, .TB2duration{
+    color: #FFFFFF90;
+    margin-bottom: 10px;
+    padding: 0;
+}
+.TB2OptionsBox{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    margin: 3% 0;
+}
+.TB2OptionsBox button{
+    width: 100%;
+    max-width: 150px;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    background-color: #1a1e1f;
+    color: white;
+    border: 1px solid #EFEEE0;
+    margin-right: 10px;
+}
+.TB2OptionsBox div{
+    /* height: auto;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 50%; */
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1e1f;
+}
+.TB2OptionsBox div img{
+    height: 15px;
+    width: 15px;
+    border: 1px solid white;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.ChartBox{
+    height: 400px;
+    width: 95%;
+    margin-left: 5%;
 }
 .chartTitle{
     color: white;
@@ -384,130 +361,6 @@ body{
     padding: 8px;
     border-radius: 50%;
 }
-/* New Releases Section Starts */
-.NewReleasesBox{
-    height: 100%;
-    /* max-height: 400px; */
-    margin-left: 10%;
-    width: 90%;
-    background-color: transparent;
-    margin-bottom: 2%;
-}
-.NewReleasesBox h3{
-    color: white;
-}
-.NewReleasesBox .slider-container{
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.NewReleasesBox .slider-wrapper{
-    width: 98%;
-    display: block;
-    white-space: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-}
-.NewReleasesBox .slider-wrapper::-webkit-scrollbar{
-    display: none;
-}
-.SliderItem{
-    position: relative;
-    margin-right: 15px;
-    display: inline-flex;
-    flex-direction: column;
-    height: auto;
-    width: 100%;
-    max-width: 150px;
-    padding: 5px;
-}
-.SliderItem img{
-    height: 100%;
-    max-height: 200px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 30px;
-}
-.SliderItem .title{
-    padding: 0;
-    padding-top: 5px;
-    margin: 0;
-    color: white;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow:hidden
-}
-.SliderItem .artiste{
-    padding: 0;
-    padding-top: 5px;
-    margin: 0;
-    color: #FFFFFF90;
-}
-
-/* PIYA - Popular In Your Area Section Starts */
-.PIYABox{
-    height: 100%;
-    /* max-height: 400px; */
-    margin-left: 10%;
-    width: 90%;
-    background-color: transparent;
-    margin-bottom: 2%;
-}
-.PIYABox h3{
-    color: white;
-}
-.PIYABox .slider-container{
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.PIYABox .slider-wrapper{
-    width: 98%;
-    display: block;
-    white-space: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-}
-.PIYABox .slider-wrapper::-webkit-scrollbar{
-    display: none;
-}
-.PIYABox .SliderItem{
-    position: relative;
-    margin-right: 15px;
-    display: inline-flex;
-    flex-direction: column;
-    height: auto;
-    width: 100%;
-    max-width: 150px;
-    padding: 5px;
-}
-.PIYABox .SliderItem img{
-    height: 100%;
-    max-height: 200px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 30px;
-}
-.PIYABox .SliderItem .title{
-    padding: 0;
-    padding-top: 5px;
-    margin: 0;
-    color: white;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow:hidden
-}
-.PIYABox .SliderItem .artiste{
-    padding: 0;
-    padding-top: 5px;
-    margin: 0;
-    color: #FFFFFF90;
-}
-
 /* music controller section starts */
     /* box-shadow: 0px 0px 10px #ccc;*/
 .controllerBox{
@@ -692,7 +545,7 @@ body{
 
 /* responsive code */
 @media screen and (min-width: 930px) {
-    .playlistChartBox{
+    .bigChartHeaderBox{
         height: 100%;
         max-height: 370px;
     }
@@ -766,57 +619,10 @@ body{
     .navBox{
         display: none;
     }
-    .playlistChartBox{
-        flex-direction: column;
-    }
-    .slideshowContainer{
-        width: 100%;
-        margin: 0;
-    }
-    .PlayListBox, .ChartBox{
-        width: 100%;
-    }   
-    .ChartBox{
-        margin-top: 5%;
-    }
-    .ChartBox .slider-wrapper{
-        display: block;
-        white-space: nowrap;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        -ms-overflow-style: -ms-autohiding-scrollbar;
-    }
-    .ChartBox .slider-wrapper::-webkit-scrollbar{
-        display: none;
-    }
-    .ChartBox .slider-item{
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        width: 80%;
-        /* max-height: 120px; */
-        display: inline-flex;
-        border-radius: 15px;
-        background-color: #1a1e1f;
-        cursor: grab;
-        margin-right: 15px;
-        padding: 3% 0%;
-    }
-    .ChartContentBox .title{
-        font-size: 1rem;
-        font-weight: 100;
-        color: white;
-        margin: 0;
-        padding: 5px;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow:hidden;
-    }
-    .NewReleasesBox, .PIYABox{
-        margin-left: 0;
+    .TB1x2{
         width: 100%;
     }
+
 }
 @media screen and (max-width: 750px){   
     .controllerBox .right,
@@ -834,6 +640,15 @@ body{
     }
     .controllerBox .center{
         flex: 30%;
+    }
+}
+@media screen and (max-width: 660px){
+    .TopBigChartHeaderBox, .TB1x2{
+        justify-content: start;
+        align-items: start;
+        height: auto;
+        max-height: fit-content;
+        flex-direction: column;
     }
 }
 @media screen and (max-width: 580px){

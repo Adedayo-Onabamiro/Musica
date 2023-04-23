@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script>
+
+    <link rel="stylesheet" href="/collection/collections.css" >
+    <title>Collection</title>
+</head>
+<body>
+    <section class="FullPage">
+        <div class="RightSide">
+            <div class="topSearchContainer">
+
+                <div class="menu-icon">
+                    <div class="hamburger"> <div class="bar"></div> </div>
+                  </div>
+                  
+                  <div class="side-menu">
+                      <a href="/index.html">   <div class="menuItem"> <div class="menuItemPic"><img src="/images/Home.png"></div> <p>Home</p> </div></a>
+                      <a href="#">   <div class="menuItem"> <div class="menuItemPic"><img src="/images/playlist.png"></div> <p>My collections</p> </div></a>
+                      <a href="#">   <div class="menuItem"> <div class="menuItemPic"><img src="/images/radio.png"></div> <p>Radio</p> </div></a>
+                      <a href="#">   <div class="menuItem"> <div class="menuItemPic"><img src="/images/radio.png"></div> <p>Music videos </p></div></a>
+                      <a href="#">   <div class="menuItem"> <div class="menuItemPic"><img src="/images/profile.png"></div> <p>Profile</p>  </div></a>
+                      <a href="#">   <div class="menuItem"> <div class="menuItemPic"><img src="/images/Logout.png"></div> <p>Log out</p> </div></a>
+                    
+                  </div>
+                  
+
+                <div class="logoDiv">
+                    <Img src="/images/logo.png">
+                </div>
+
+                <form action="/search" class="search-form">
+                  <label for="search-input" class="sr-only"></label>
+                  <div class="search-group">
+                    <button type="submit" class="search-icon"><i class="fa fa-search"></i></button>
+                    <input type="text" class="search-input" id="search-input" placeholder="Search artists">
+                  </div>
+                </form>
+              </div>
+
+            <div class="playlistChartBox">
+                <div class="navBox">
+                    <div class="navBoxInsideBox">
+                        <a href="/index.html"><img src="/images/Home.png"></a>
+                        <a href="#"><img src="/images/playlist.png"></a>
+                        <a href="#"><img src="/images/radio.png"></a>
+                        <a href="#"><img src="/images/videos.png"></a>
+                    </div>
+
+                    <div class="navBoxInsideBox">
+                        <a href="#"><img src="/images/profile.png"></a>
+                        <a href="#"><img src="/images/Logout.png"></a>
+                    </div>
+                </div>
+                <div class="CollectionBox">
+                    <div class="buttonsBox">
+                        <button>My collection</button>
+                        <button>Likes</button>
+                    </div>
+                    <div class="contentsBox">
+                        <div class="PIYABox">
+                            <div class="slider-container"> 
+                                <div class="slider-wrapper">
+                                    <div class="SliderItem">
+                                        <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                                        <div class="itemdet">
+                                            <p class="title">Keeps Me Alive</p>
+                                            <p class="artiste">Moses Sumney</p>
+                                            <p class="likes">2.3m likes</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="SliderItem">
+                                        <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                                        <div class="itemdet">
+                                            <p class="title">Keeps Me Alive</p>
+                                            <p class="artiste">Moses Sumney</p>
+                                            <p class="likes">2.3m likes</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="SliderItem">
+                                        <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                                        <div class="itemdet">
+                                            <p class="title">Keeps Me Alive</p>
+                                            <p class="artiste">Moses Sumney</p>
+                                            <p class="likes">2.3m likes</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="SliderItem">
+                                        <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                                        <div class="itemdet">
+                                            <p class="title">Keeps Me Alive</p>
+                                            <p class="artiste">Moses Sumney</p>
+                                            <p class="likes">2.3m likes</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="SliderItem">
+                                        <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                                        <div class="itemdet">
+                                            <p class="title">Keeps Me Alive</p>
+                                            <p class="artiste">Moses Sumney</p>
+                                            <p class="likes">2.3m likes</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="SliderItem">
+                                        <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                                        <div class="itemdet">
+                                            <p class="title">Keeps Me Alive</p>
+                                            <p class="artiste">Moses Sumney</p>
+                                            <p class="likes">2.3m likes</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="SliderItem">
+                                        <img src="/images/b95593abe4cff18d11212bdc3853b029.jfif">
+                                        <div class="itemdet">
+                                            <p class="title">Keeps Me Alive</p>
+                                            <p class="artiste">Moses Sumney</p>
+                                            <p class="likes">2.3m likes</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="controllerBox">
+                <div class="left">
+                    <div class="details">
+                        <div class="details1">
+                            <img src="/images/a1254fdf29fcb472537cc00108e9b716.jfif">
+                        </div>
+                        <div class="details2">
+                            <p class="title"> Seasons in</p>
+                            <p class="artiste"> James</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="music-player">
+                        <div class="music-controls">
+                        <button class="previous-button"><i class="fa fa-backward"></i></button>
+                        <button class="play-button"><i class="fa fa-play"></i></button>
+                        <button class="pause-button"><i class="fa fa-pause"></i></button>
+                        <button class="stop-button"><i class="fa fa-stop"></i></button>
+                        <button class="next-button"><i class="fa fa-forward"></i></button>
+                        <button class="shuffle-button"><i class="fa fa-random"></i></button>
+                        <button class="repeat-button"><i class="fa fa-redo"></i></button>
+                        </div>
+                        <div class="music-progress">
+                        <span class="music-timer">0:00</span>
+                        <input type="range" min="0" max="100" value="0" class="music-slider">
+                        <span class="music-duration">0:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="volume-container">
+                        <button class="volume-button"><i class="fa fa-volume-up"></i></button>
+                        <input type="range" min="0" max="100" value="100" class="volume-slider">
+                      </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </section>
+
+
+    <script src="/collection/collections.js"></script>
+</body>
+</html>

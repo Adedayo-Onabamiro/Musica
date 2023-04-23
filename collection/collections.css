@@ -6,26 +6,19 @@ body{
 }
 .FullPage{
     height: 100%;
+    min-height: 100vh;
     padding: 0 2%;
     width: 96%;
     background-color: #1d2123;
     display: flex;
-    flex-direction: row;
 }    
-.LeftSide{
-    display: flex;
-    flex-direction: column;
-    /* height: inherit; */
-    width: 7%;
-    border: 1px solid green;
-    align-items: center;
-    /* justify-content: center; */
-}
 .RightSide{
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     height: 100%;
     width: 99%;
+    min-height: 100vh;
 }
 /* start of search box at top */
 .topSearchContainer {
@@ -126,10 +119,11 @@ body{
     display: flex;
     flex-direction: row;
     margin-bottom: 2%;
+
 }
 .navBox{
     height: auto;
-    flex: 10%;
+    width: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -153,307 +147,49 @@ body{
     object-fit: contain;
     margin-bottom: 5%;
 }
-.PlayListBox{
+.CollectionBox{
     height: 100%;
-    width: 60%;
+    width: 80%;
     display: flex;
-    justify-content: start;
-    align-items: center;
-}
-
-/* Slideshow container */
-.slideshowContainer {
-  width: 90%;
-  position: relative;
-  height: 90%;
-  background-color: transparent;
-}
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 2.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-.slideshowItem{
-    border-radius: 50px;
-    height: 100%;
-    width: 100%;
-    /* border: 1px solid white; */
-    display: flex;
-    flex-direction: row;
-    background-color: transparent;
-    align-items: center;
-}
-.S1{
-    background-color: #609EAF;
-}
-.S2{
-    background-color: orange;
-}
-.S3{
-    background-color: purple;
-}
-.slideshowItemLeft{
-    color: white;
-    height: 100%;
-    width: 45%;
-    padding: 0 5%;
-    display: flex;
+    /* justify-content: start;
+    align-items: center; */
     flex-direction: column;
-    justify-content: space-around;
-}
-.ItemMiddle h3{
-    color: white;
-    margin: 0;
-    font-size: 2rem;
-    font-family: Quicksand;
-}
-.Itembottom{
-    height: 50px;
-    width: 100%;
-    background-color: transparent;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
 }
-.avatars img{
-    width: 25px;
-    height: 25px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-.avatars ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.avatars li{
-    object-fit: contain;
-    /* border: 1px solid rgb(144, 137, 137); */
-    display: inline-block;
-    position: relative;
-    -webkit-transition: .2s ease;
-    transition: .2s ease;
-}
-.avatars li:nth-child(1) {}
-.avatars li:nth-child(2) {}
-.avatars li:nth-child(3) {}
-.avatars li:nth-child(4) {}
-.avatars li:nth-child(5) {}
-.avatars li:nth-child(n+2) { margin-left: -25px; }
-  
-.avatars ul li:nth-child(n+2) {
-     margin-left: -15px;
-}
-.heart{
-    height: 30px;
-    width: 30px;
-}
-.Itembottom h3{
-    font-weight: 100;
-    color: white;
-}
-.slideshowItemRight{
-    height: auto;
-    display: flex;
-    width: 30%;
-    justify-content: center;
-    align-items: center;
-}
-.slideshowItemRight img{
-    z-index: 10;
-    position: relative;
-    object-fit: contain;
-    height: 100%;
-}
-.smoke{
-    z-index: 1;
-    position: absolute;
-    object-fit: contain;
-    right: 5%;
-    top: 0%;
-    height: 98%;
-}
-/* slideshow css */
-.ChartBox{
-    height: auto;
-    width: 30%;
-}
-.chartTitle{
-    color: white;
-    font-size: 1.8rem;
-    font-weight: 200;
-    text-align: left;
-    padding: 1%;
-    margin: 2% 0;
-}
-.ChartContentBox{
-    height: 80%;
-    width: 95%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.ChartBox .slider-wrapper{
-    overflow-x: hidden;
-    max-height: 100%;
-    -webkit-overflow-scrolling: touch;
-    /* -ms-overflow-style: -ms-autohiding-scrollbar; */
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-.ChartBox .slider-wrapper::-webkit-scrollbar{
-    display: none;
-}
-.ChartBox .slider-item{
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+.buttonsBox{
     width: 100%;
-    max-height: 120px;
-    display: inline-flex;
-    border-radius: 15px;
-    background-color: #1a1e1f;
-    cursor: grab;
-    margin-bottom: 15px;
-    padding: 3% 0%;
-}
-.SI1{
-    width: 20%;
-    height: 96%;
+    height: 30%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    margin-bottom: 5%;
 }
-.SI1 img{
-    height: 100%;
-    width: 100%;
-    max-width: 70px;
-    object-fit: cover;
-    border-radius: 15px;
-}
-.SI2{
-    width: 60%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.ChartContentBox .title{
-    font-size: 1rem;
-    font-weight: 100;
-    color: white;
-    margin: 0;
-    padding: 5px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow:hidden;
-}
-.ChartContentBox .author{
-    font-size: .9rem;
-    font-weight: 100;
-    color: gainsboro;
-    margin: 0;
-    padding: 5px;
-}
-.ChartContentBox .duration{
-    font-size: .8rem;
-    font-weight: 100;
-    color: white;
-    margin: 0;
-    padding: 5px;
-}
-.SI3{
-    width: 10%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.SI3 img{
-    height: 15px;
-    width: 15px;
-    border: 1px solid white;
-    padding: 8px;
-    border-radius: 50%;
-}
-/* New Releases Section Starts */
-.NewReleasesBox{
-    height: 100%;
-    /* max-height: 400px; */
-    margin-left: 10%;
-    width: 90%;
-    background-color: transparent;
-    margin-bottom: 2%;
-}
-.NewReleasesBox h3{
-    color: white;
-}
-.NewReleasesBox .slider-container{
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.NewReleasesBox .slider-wrapper{
-    width: 98%;
-    display: block;
-    white-space: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-}
-.NewReleasesBox .slider-wrapper::-webkit-scrollbar{
-    display: none;
-}
-.SliderItem{
-    position: relative;
-    margin-right: 15px;
-    display: inline-flex;
-    flex-direction: column;
-    height: auto;
+.buttonsBox button{
     width: 100%;
     max-width: 150px;
-    padding: 5px;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    background-color: #1a1e1f;
+    color: #EFEEE080;
+    border: 1px solid #EFEEE0;
+    margin-right: 10px;
 }
-.SliderItem img{
-    height: 100%;
-    max-height: 200px;
+.buttonsBox button:hover{
+    background-color: #FACD66;
+    color: black;
+}
+.contentsBox{
+    height: 60%;
     width: 100%;
-    object-fit: cover;
-    border-radius: 30px;
 }
-.SliderItem .title{
-    padding: 0;
-    padding-top: 5px;
-    margin: 0;
-    color: white;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow:hidden
-}
-.SliderItem .artiste{
-    padding: 0;
-    padding-top: 5px;
-    margin: 0;
-    color: #FFFFFF90;
-}
-
 /* PIYA - Popular In Your Area Section Starts */
 .PIYABox{
     height: 100%;
     /* max-height: 400px; */
-    margin-left: 10%;
-    width: 90%;
+    /* margin-left: 10%; */
+    width: 100%;
     background-color: transparent;
-    margin-bottom: 2%;
+    /* margin-bottom: 2%; */
 }
 .PIYABox h3{
     color: white;
@@ -469,6 +205,7 @@ body{
     display: block;
     white-space: nowrap;
     overflow-x: auto;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
 }
@@ -490,24 +227,46 @@ body{
     max-height: 200px;
     width: 100%;
     object-fit: cover;
-    border-radius: 30px;
+    border-radius: 15px;
+    filter: brightness(70%);
+}
+.PIYABox .SliderItem .itemdet{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: auto;
+    position: absolute;
+    bottom: -10%;
+}
+.PIYABox .SliderItem .itemdet:hover{
+    bottom: 0;
 }
 .PIYABox .SliderItem .title{
     padding: 0;
     padding-top: 5px;
     margin: 0;
+    font-size: 1rem;
     color: white;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow:hidden
+    overflow:hidden;
 }
 .PIYABox .SliderItem .artiste{
     padding: 0;
     padding-top: 5px;
     margin: 0;
-    color: #FFFFFF90;
+    color: white;
+    font-size: .8rem;
 }
-
+.PIYABox .SliderItem .likes{
+    padding: 0;
+    padding-top: 5px;
+    margin: 0;
+    color: #FFFFFF90;
+    font-size: .6rem;
+}
 /* music controller section starts */
     /* box-shadow: 0px 0px 10px #ccc;*/
 .controllerBox{
@@ -516,10 +275,9 @@ body{
     max-height: 150px;
     width: auto;
     background-color: #1a1e1f;
-    opacity: 90%;
     display: flex;
     flex-direction: row;
-    margin: 2%;
+    margin:1% 2%;
     bottom: 0;
     position: sticky;
 }
@@ -816,6 +574,10 @@ body{
     .NewReleasesBox, .PIYABox{
         margin-left: 0;
         width: 100%;
+    }
+    .CollectionBox{
+        width: 96%;
+        padding: 0 2%;
     }
 }
 @media screen and (max-width: 750px){   
